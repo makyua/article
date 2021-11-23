@@ -13,7 +13,7 @@ def main():
     #pt: 出版形式
     tm_st = time.time()
     query_set_1 = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term="
-    query_set_2 = "AND review[pt]&retmax=5&retmode=json"
+    query_set_2 = "&retmax=5&retmode=json"
     import openpyxl
     #リファレンス: https://openpyxl.readthedocs.io/en/stable/api/openpyxl.reader.excel.html#openpyxl.reader.excel.load_workbook
     EXCEL_PATH = "C:\\Users\\makyua\\anaconda3\\envs\\gpu\\Scripts\\test\\pubmed.xlsm"
