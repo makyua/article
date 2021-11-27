@@ -52,6 +52,7 @@
 #     # wb.save("C://Users//makyua//anaconda3//envs//gpu//Scripts//test//pubmed.xlsm")
 
 
+#
 #https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db={database}&term={query}
 #database: 検索するデータベースを指定する
 #query: 検索するキーワードを指定
