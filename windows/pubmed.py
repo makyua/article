@@ -66,18 +66,21 @@ import json
 import time
 import openpyxl
 from lxml import etree
+import math
 
 #pubmedから検索する部分
 def detect(ws):
     query_set_1 = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term="
-    query_set_2 = "&retmax=5&retmode=json"
+    query_set_2 = "&retmax=5&retmode=json&retstart="
     # query_set_2 = "AND review[pt]&retmax=5&retmode=json"
     #キーワードの取得
     key_1 = ws["B2"].value
     key_2 = ws["C2"].value
     key_3 = ws["D2"].value
+    #ページ数の取得→表示させたいPMIDの番数
+    page = 5*(math.floor(ws["B4"].value) - 1)
     #検索を始める
-    query = query_set_1 + " (" + key_1 + ") AND (" + key_2 + ") AND (" + str(key_3) + ") " + query_set_2
+    query = query_set_1 + " (" + str(key_1) + ") AND (" + str(key_2) + ") AND (" + str(key_3) + ") " + query_set_2 + str(page)
     #検索結果の返信
     response = requests.get(query)
     #検索結果を返す
