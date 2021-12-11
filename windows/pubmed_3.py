@@ -132,7 +132,7 @@ def abst(response,ws):
     
 def main():        
     #リファレンス: https://openpyxl.readthedocs.io/en/stable/api/openpyxl.reader.excel.html#openpyxl.reader.excel.load_workbook
-    EXCEL_PATH = "C:\\Users\\makyua\\anaconda3\\envs\\gpu\\Scripts\\test\\pubmed.xlsm"
+    EXCEL_PATH = "C:\\Users\\makyua\\Desktop\\article-3\\article\\windows\\pubmed_3.xlsm"
     #Excelファイルの読み込み
     wb = xw.Book(EXCEL_PATH)
     #Excelシートの読み込み
